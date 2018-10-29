@@ -18,7 +18,7 @@ client.connect();
 //var thisQuery = "CREATE TABLE aameetingsData (id serial, meeting_name varchar(75), location_name varchar(75), meeting_address varchar(100), meeting address, meeting_day varchar(30), meeting_start varchar(25), meeting_end varchar(25), meeting_topic(100), meeting_interests(100), PRIMARY KEY(id);";
 
 
-var thisQuery =  "SELECT meeting_address, location_name FROM aameetingsData WHERE meeting_start = '3:00PM';";
+var thisQuery =  "SELECT address, location FROM aameetingsData WHERE start = '3:00PM';";
 // var thisQuery = "SELECT count(*) from aadata;";
 // " = "SELECT count(distinct mtglocation, mtgaddress) FROM aadata;
 // "= "SELECT distinct mtgaddress FROM aadata"
