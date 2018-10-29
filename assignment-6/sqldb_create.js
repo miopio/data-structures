@@ -14,11 +14,8 @@ client.connect();
 
 //create table with all meeting data
 
-var thisQuery = "CREATE TABLE aameetingsData (id serial, meeting_name varchar(75), location_name varchar(75), meeting_address varchar(100), meeting_day varchar(30), meeting_start varchar(25), meeting_end varchar(25), meeting_topic(100), meeting_interests(100), PRIMARY KEY(id);";
+var thisQuery = "CREATE TABLE aameetingsData (day varchar(25), start varchar(25), end varchar(25), name varchar(100), location varchar(100), address varchar(100), lat double precision, long double precision, region int, type varchar(100), interest varchar(100);";
 
-//attempted to make two tables but not working
-//var thisQuery = "CREATE TABLE aameetingsData (id serial, meeting_name varchar(75), location_name varchar(75), meeting_address varchar(100), meeting address, PRIMARY KEY(id);";
-//"CREATE TABLE aascheduleData (id int, meeting_day varchar(30), meeting_start varchar(25), meeting_end varchar(25), meeting_topic(100)), meeting_interests(100), PRIMARY KEY (id), CONSTRAINT fk_id FOREIGN KEY (id) REFERENCES aameetingsData (id);";
 
 // Sample SQL statement to create a table: 
 //var thisQuery = "CREATE TABLE aadata (address varchar(100), lat double precision, lon double precision);";
