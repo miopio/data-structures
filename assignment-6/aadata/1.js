@@ -50,7 +50,7 @@ for(var i=1;i<11;i++){
         // get needed info from middle cells
         var middle_cells = [1];
         var middle_start = 1;
-        for (i=0;i<50;i++){
+        for (i=0;i<100;i++){
             middle_start = middle_start+3;
             middle_cells.push(middle_start);
         }

@@ -8,7 +8,7 @@ function format(n) {
     return (n < 10) ? ("0" + n) : n;
 }
 
-for (var i=10;i<11;i++){
+for (var i=1;i<11;i++){
     getgeodata(i);
 }
 
@@ -20,6 +20,7 @@ function getgeodata (i){
     var save_path = "parsed_data/parsed_m"+file+"_geo.json";
     var data = JSON.parse(json);
     var result = [];
+    var constant = 0;
     
     for(var i in data)
     result.push(data[i]);
@@ -35,7 +36,7 @@ function getgeodata (i){
     
     // // eachSeries in the async module iterates over an array and operates on each item in the array in series
     async.eachSeries(addresses, function(value, callback) {
-        var id = addresses.indexOf(value);
+        var id = constant++;
         console.log(id);
         var apiRequest = 'https://geoservices.tamu.edu/Services/Geocode/WebService/GeocoderWebServiceHttpNonParsed_V04_01.aspx?';
         apiRequest += 'streetAddress=' + value.split(' ').join('%20');
