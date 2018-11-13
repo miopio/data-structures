@@ -8,7 +8,7 @@ var db_credentials = new Object();
 db_credentials.user = 'miopio';
 db_credentials.host = 'datastructures.cmvyyi1w0p9g.us-east-2.rds.amazonaws.com';
 db_credentials.database = 'dataStructures';
-db_credentials.password = "meow1meow";
+db_credentials.password = process.env.AWSRDS_PW;
 db_credentials.port = 5432;
 
 console.log('start');
