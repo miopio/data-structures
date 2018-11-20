@@ -25,7 +25,7 @@ var getAndWriteData = function() {
         
         // Convert 1/0 to TRUE/FALSE for the Postgres INSERT INTO statement
         var sv_mod; 
-        if (sv == 1) {
+        if (sv >= 1) {
             sv_mod = "TRUE";
         }
         else if (sv == 0) {
