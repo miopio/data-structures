@@ -25,12 +25,7 @@ var getAndWriteData = function() {
         
         // Convert 1/0 to TRUE/FALSE for the Postgres INSERT INTO statement
         var sv_mod; 
-        if (sv >= 1) {
-            sv_mod = "TRUE";
-        }
-        else if (sv == 0) {
-            sv_mod = "FALSE";
-        }
+        sv_mod = sv;
 
         // Connect to the AWS RDS Postgres database
         const client = new Client(db_credentials);
@@ -49,4 +44,4 @@ var getAndWriteData = function() {
 };
 
 // write a new row of sensor data every five minutes
-setInterval(getAndWriteData, 300000);
+setInterval(getAndWriteData, 60000);
