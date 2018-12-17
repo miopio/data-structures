@@ -22,7 +22,7 @@ var thisQuery = `SELECT lat, long, location, address, starttime, name, day, type
 
 I used Leaflet.js to map our meetings onto a map of Manhattan. Each marker was placed using latitude and longitude data, and by using Leaflet's popup capabilities, I visualized the relevant meeting info for each marker in the popup. Once visualized, I noticed there were four locations that were in Brooklyn (I think there were equivalent street addresses for those four places in both New York, NY and Brooklyn, NY). Those had to be fixed by figuring out what zones these locations were in, and changing the latitude and longitude data to the correct ones. I then decided to create selectable layers, so meetings for different days could be visualized separately to allow for a less cluttered map. I did this by taking the data from the query, and separating the meetings data occuring on different days into arrays. I then put these arrays into different layer groups that I could control. If there were more time, I would like to make the interface I originally wanted to make, allowing the user a better interface for searching and selecting for meetings on different days and times. However, even with this basic visualization, a user could get the relevant information needed to attend an AA meeting in Manhattan.
 
-![Visualization for AA Meetings data](/aameetingsdata.png)
+![Visualization for AA Meetings data](/final_assignments/aameetingsdata.png)
 
 
 ### Final Assignment 2: Dear Diary Data
@@ -79,7 +79,7 @@ For visualizing my data, I initially started off with a sketch that was entirely
 
 Once I got the necessary entries, I needed to extract my variables of interest from the data. For each "happy" entry, I extracted the date, happiness levels, productivity levels, stress levels, blurbs, and social interaction strings and put the data into corresponding arrays. I decided to use a bar graph to visualize this information, since it was the cleanest way to communicate the varying happiness, productivity, and stress levels for each entry. Using Plotly.js, I created this bar graph showing the different levels for each day (scale of 1-10, y axis), in relation to the date of the "happy" entries (x axis). Using the toolkit capabilities, I visualized the strings I inputted for my general blurb and comments on significant social interactions upon hovering over each group of bars. In the future, I would like to add additional capabilities; it would be nice to visualize some of the other variables as well, but in a different format than the bar graph. In general, working with the DynamoDB database was smooth and reliable. This would not be a difficult project to maintain longitudinally in terms of keeping up with the functionality; the most difficult part was remembering to enter my diary entries. Perhaps because I created so many variables, I made it slightly difficult on myself to keep up with the entries. If I created a simple interface to input my entries, it would definitely help (rather than having to enter it in Cloud9 as one line).
 
-![Visualization for Dear Diary data](/deardiarydata.png)
+![Visualization for Dear Diary data](/final_assignments/deardiarydata.png)
 
 
 ### Final Assignemnt 3: Sensor Data
@@ -110,7 +110,7 @@ This takes the sensorTime, converts it to EST, and gets the date (YYYYMMDD) as t
 
 I decided visualizing this data in bar graph format would be the simplest and cleanest way to visualize this data. I inputted sensorDay and desktime values into corresponding arrays to use in the visualization. Using Plotly.js, I made a bar graph that shows the number of minutes I sat at my desk (y axis) each day (x axis). I used the tooltip capability to show the time in hours and minutes when the user hover overs one of the bars, for better readability of the data. I made a function that would calculate the average time spent at my desk each day from the query data, so I could know how much time I was spending on average at my desk in a ~8-10 hour work day. It shows the general pattern of my work week pretty well--on Mondays, I usually have several meetings, which means I am at my desk more prepping for the meetings rather than doing experiments. Mid week, I am usually doing long experiments in the lab. On weekends, I am not at work, thus not at my desk. Overall I am satisfied that I was able to manipulate my variables in order to get accurate data fitting the needs of my data collection objectives, and I think this paradigm would be easy to use for anybody who is curious to see how long he/she is in one particular area daily.
 
-![Visualization for Sensor data](/sensordata.png)
+![Visualization for Sensor data](/final_assignemnts/sensordata.png)
 
 
 
