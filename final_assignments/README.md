@@ -1,5 +1,7 @@
 ##Documentation for Final Assignments
 
+Running application: http://18.221.235.98:8080
+
 ###Final Assignment 1: AA Meetings Data
 The AA Meetings data was perhaps the most difficult dataset to work with, from the web scraping in the beginning, to creating a workable JSON with all of the necessary variables in the right format, to putting all of the data into a PostGreSQL database, to visualizing it. It required many trial and error sessions, debugging, and thinking about how to format the data so we could use it easily in our queries and visualizations. 
 
