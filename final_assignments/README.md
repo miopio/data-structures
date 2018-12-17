@@ -110,7 +110,7 @@ This takes the sensorTime, converts it to EST, and gets the date (YYYYMMDD) as t
 
 I decided visualizing this data in bar graph format would be the simplest and cleanest way to visualize this data. I inputted sensorDay and desktime values into corresponding arrays to use in the visualization. Using Plotly.js, I made a bar graph that shows the number of minutes I sat at my desk (y axis) each day (x axis). I used the tooltip capability to show the time in hours and minutes when the user hover overs one of the bars, for better readability of the data. I made a function that would calculate the average time spent at my desk each day from the query data, so I could know how much time I was spending on average at my desk in a ~8-10 hour work day. It shows the general pattern of my work week pretty well--on Mondays, I usually have several meetings, which means I am at my desk more prepping for the meetings rather than doing experiments. Mid week, I am usually doing long experiments in the lab. On weekends, I am not at work, thus not at my desk. Overall I am satisfied that I was able to manipulate my variables in order to get accurate data fitting the needs of my data collection objectives, and I think this paradigm would be easy to use for anybody who is curious to see how long he/she is in one particular area daily.
 
-![Visualization for Sensor data](/final_assignemnts/sensordata.png)
+![Visualization for Sensor data](/final_assignments/sensordata.png)
 
 
 
